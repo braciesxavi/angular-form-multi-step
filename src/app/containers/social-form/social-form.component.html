@@ -1,0 +1,32 @@
+<div class="col-md-12 order-md-1">
+        <h4 class="mb-3">Social data</h4>
+        <form #socialForm="ngForm" (ngSubmit)="onSubmit(socialForm)">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="txtFacebook">Facebook</label>
+                        <input type="text" id="txtFacebook" class="form-control" required placeholder="facebook" [(ngModel)]="socialData.facebook" name="facebook">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="txtWebsite">Website</label>
+                        <input type="text" id="txtWebsite" class="form-control" required placeholder="website" [(ngModel)]="socialData.website" name="website">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="txtInstagram">Instagram</label>
+                        <input type="text" class="form-control" id="txtInstagram"
+                            required placeholder="Instagram" name="instagram" [(ngModel)]="socialData.instagram">
+    
+                    </div>
+                </div>
+                
+                <div class="col-md-12 pull-right text-right"> 
+                    <a routerLink="/personal" class="btn btn-secondary pull-left" ><< Back</a>
+                    <button type="submit" class="btn btn-primary pull-right" [disabled]="!socialForm.valid">Complete</button>
+                </div>  
+            </div>
+        </form>
+    </div>
