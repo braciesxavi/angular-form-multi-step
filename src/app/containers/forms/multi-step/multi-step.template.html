@@ -1,0 +1,47 @@
+<div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/assets/images/AccountIcon2.png" alt="" width="72" height="72">
+    <h2>Account form</h2>
+    <!-- <p class="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
+  </div>
+  <!-- Horizontal Steppers -->
+    <div class="row">
+      <div class="col-md-12">
+
+        <!-- Stepers Wrapper -->
+        <ul class="stepper stepper-horizontal">
+
+          <!-- First Step -->
+          <li class="completed">
+            <a routerLink="/forms/multi-step/personal">
+              <span class="circle">1</span>
+              <span class="label">Personal</span>
+            </a>
+          </li>
+
+          <!-- Second Step -->
+          <li class="active">
+            <a routerLink="/forms/multi-step/social">
+              <span class="circle">2</span>
+              <span class="label">Social</span>
+            </a>
+          </li>
+
+          <!-- Third Step -->
+          <li class="warning">
+            <a routerLink="/forms/multi-step/info">
+              <span class="circle"><i class="fas fa-exclamation"></i></span>
+              <span class="label">Result</span>
+            </a>
+          </li>
+
+        </ul>
+        <!-- /.Stepers Wrapper -->
+
+      </div>
+    </div>
+    <!-- /.Horizontal Steppers -->
+  <div class="row">
+    
+      <router-outlet></router-outlet>
+    
+  </div>

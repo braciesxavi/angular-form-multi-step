@@ -1,0 +1,53 @@
+
+
+<div class="row">
+ 
+    <div class="col-sm">
+        <app-card  (checkedChange)="cardEventChange($event, i)">
+            <h4 class="card-title"><a>Card event</a></h4>
+            <div class="card-text">
+                   
+                <p>Component using EventEmitter</p>
+            </div>
+           
+        </app-card>
+        
+    </div>
+    <div class="col-sm">
+        <!-- Card -->
+<div class="card">
+
+        <!-- Card image -->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+      
+        <!-- Card content -->
+        <div class="card-body">
+      
+          <!-- Title -->
+          <h4 class="card-title">Ng-template card</h4>
+          <!-- Text -->
+          <ng-template [ngIf]="cardEventChecked">
+                <span>This is show when clicked card event</span>
+            </ng-template>
+          <!-- Button -->
+
+      
+        </div>
+      
+      </div>
+      <!-- Card -->
+            
+    </div>
+    <div class="col-sm">
+
+    </div>
+  </div>
+  <div class="row">
+     
+      
+  </div>
