@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormAccountService } from 'src/app/services/form-account.service';
 import { Personal } from 'src/app/services/account.model';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-personal-form',
@@ -10,10 +11,19 @@ import { Router } from '@angular/router';
 })
 export class PersonalFormComponent implements OnInit {
   personalData: Personal;
-  constructor(private formAccountService: FormAccountService, private router: Router ) { }
+  data: any = null;
+  constructor(private formAccountService: FormAccountService, private router: Router, private dataService: DataService ) {
+    this.dataService.currentData.subscribe((data: any) => {
+      if (data.key === 'form'){
+        this.data = data.value;
+        console.log('VALUE', data.value);
+      }
+    })
+  }
 
   ngOnInit() {
     this.personalData = this.formAccountService.getPersonal();
+    
   }
   onSubmit(form: any) {
     if (form.valid){

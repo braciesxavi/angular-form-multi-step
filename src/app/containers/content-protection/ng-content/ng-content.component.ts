@@ -14,4 +14,7 @@ export class NgContentComponent implements OnInit {
   cardEventChange(event){
     this.cardEventChecked = event;
   }
+  eventCall(event){
+    console.log('CALL EVENT: ', event.clipboardData)
+  }
 }
